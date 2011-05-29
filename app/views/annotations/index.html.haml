@@ -1,0 +1,25 @@
+%h1 Listing annotations
+
+%table
+  %tr
+    %th X
+    %th Y
+    %th Body
+    %th Order on page
+    %th
+    %th
+    %th
+
+  - @annotations.each do |annotation|
+    %tr
+      %td= annotation.x
+      %td= annotation.y
+      %td= annotation.body
+      %td= annotation.order_on_page
+      %td= link_to 'Show', annotation
+      %td= link_to 'Edit', edit_annotation_path(annotation)
+      %td= link_to 'Destroy', annotation, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Annotation', new_annotation_path

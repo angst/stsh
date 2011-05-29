@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b X:
+  = @annotation.x
+%p
+  %b Y:
+  = @annotation.y
+%p
+  %b Body:
+  = @annotation.body
+%p
+  %b Order on page:
+  = @annotation.order_on_page
+
+= link_to 'Edit', edit_annotation_path(@annotation)
+\|
+= link_to 'Back', annotations_path
