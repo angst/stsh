@@ -1,4 +1,8 @@
 Stsh::Application.routes.draw do
+  get "site/index"
+
+  get "site/about"
+
   root :to => "images#index"
   
   resources :images
