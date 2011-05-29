@@ -15,7 +15,7 @@ On POST a url will be returned to you to share to the rest of the world.
 
 Example:
 
-	$ curl -d "http://google.com/" http://stsh.me/
+	$ curl -d 'http://google.com/' http://stsh.me/
 	$ # => http://stsh.me/2d3
 
 
