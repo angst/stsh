@@ -40,7 +40,6 @@ class ImagesController < ApplicationController
   # POST /images
   # POST /images.xml
   def create
-    file = "/Users/jakedahn/Desktop/foo.png"
     client = CloudFiles::Connection.new(
       :username => 'jakedahn', 
       :api_key => ENV['RAX_CF_KEY']
@@ -49,7 +48,7 @@ class ImagesController < ApplicationController
     upload = client.create_object("#{ActiveSupport::SecureRandom.hex(16)}.png", false)
     if upload.write(request.body.read)
       @image = Image.create(:url => upload.public_url.to_s)
-      render :text => @image.url
+      render :text => @image.short_url
     end
   end
 
