@@ -40,16 +40,16 @@ class ImagesController < ApplicationController
   # POST /images
   # POST /images.xml
   def create
-    @image = Image.new(params[:image])
+    file = "/Users/jakedahn/Desktop/foo.png"
+    client = CloudFiles::Connection.new(
+      :username => 'jakedahn', 
+      :api_key => ENV['RAX_CF_KEY']
+    ).container('stsh')
 
-    respond_to do |format|
-      if @image.save
-        format.html { redirect_to(@image, :notice => 'Image was successfully created.') }
-        format.xml  { render :xml => @image, :status => :created, :location => @image }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @image.errors, :status => :unprocessable_entity }
-      end
+    upload = client.create_object("#{ActiveSupport::SecureRandom.hex(16)}.png", false)
+    if upload.write(request.body.read)
+      @image = Image.create(:url => upload.public_url.to_s)
+      render :text => @image.url
     end
   end
 
