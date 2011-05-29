@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110529065433) do
+ActiveRecord::Schema.define(:version => 20110529090411) do
 
   create_table "annotations", :force => true do |t|
     t.integer  "x"
@@ -28,6 +28,14 @@ ActiveRecord::Schema.define(:version => 20110529065433) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "shorturls", :force => true do |t|
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "shorturls", ["url"], :name => "index_shorturls_on_url"
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false

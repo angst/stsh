@@ -1,0 +1,19 @@
+%h1 Listing shorturls
+
+%table
+  %tr
+    %th Url
+    %th
+    %th
+    %th
+
+  - @shorturls.each do |shorturl|
+    %tr
+      %td= shorturl.url
+      %td= link_to 'Show', shorturl
+      %td= link_to 'Edit', edit_shorturl_path(shorturl)
+      %td= link_to 'Destroy', shorturl, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Shorturl', new_shorturl_path

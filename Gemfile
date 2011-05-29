@@ -36,4 +36,4 @@ gem "jquery-rails"
 
 
 gem "cloudfiles"
-
+gem "alphadecimal"

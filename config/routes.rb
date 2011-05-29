@@ -1,13 +1,12 @@
 Stsh::Application.routes.draw do
-  
   root :to => "images#index"
   
   resources :images
-
   resources :annotations
-
   devise_for :users
 
+  resources :shorturls, :only => [:create, :show] 
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
