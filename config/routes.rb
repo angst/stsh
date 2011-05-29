@@ -1,4 +1,6 @@
 Stsh::Application.routes.draw do
+  resources :images
+
   resources :annotations
 
   devise_for :users
