@@ -1,35 +1,42 @@
-%section
-  .left
-    %h2 Open Source &amp; Community Driven
-    %p
-      Originally STSH.ME was a way for its creators to simply upload and share screenshots. But over time the vision of the project morphed into something that would be more beneficial for the web world at large.
-    %p
-      That said; you can upload photos, music, videos, text files, or whatever - with a simple click+drag of a mouse, or a few nifty keystrokes.
-  .right
-    %h2 Download &amp; Contribute
-    %ul
+#home
+  %section
+    .left
+      %h2 Open Source &amp; Community Driven
+      %p
+        Originally STSH.ME was a way for its creators to simply upload and share screenshots. But over time the vision of the project morphed into something that would be more beneficial for the web world at large.
+      %p
+        That said; you can upload photos, music, videos, text files, or whatever - with a simple click+drag of a mouse, or a few nifty keystrokes.
+    .right
+      %h2 Download it &amp; Contribute
+      %ul#contribute
+        %li
+          %a#zip{:href => "http://stsh.me/stsh.app.zip", :title => "Download .ZIP"} Download .ZIP
+        %li
+          %a#github{:href => "https://github.com/angst/stsh-client", :target => "_blank", :title => "Contribute on Github"} Contribute on Github
+  %section
+    %h2 Why stsh?
+    %ol#why
       %li
-        %a#zip{:href => "http://stsh.me/stsh.app.zip", :title => "Download .ZIP"} Download .ZIP
+        %p
+          %strong
+            You host your own files.
+          This means that you have full ownership and control over what happens to them, if our datacenter explodes into into little pieces, you will still have your files. You can set up your own private hosting using services like:
+          = succeed "," do
+            %a{:href => "http://aws.amazon.com/s3/", :target => "_blank", :title => "Amazon Simple Storage Service (Amazon S3)"} Amazon S3
+          = succeed "," do
+            %a{:href => "http://www.rackspace.com/cloud/cloud_hosting_products/files/", :target => "_blank", :title => "Cloud Files - Unlimited Online Storage &amp; Data Storage Services"} CloudFiles
+          SFTP, etc.
       %li
-        %a#github{:href => "https://github.com/angst/stsh-client", :target => "_blank", :title => "Contribute on Github"} Contribute on Github
-%section
-  %h2 Features
-  %ol
-    %li
-      %p
-        You host your own files. This means that you have full ownership and control over what happens to them, if our datacenter explodes into a billion tiny little pieces, you will still have your files. You can set up your own private hosting using services like:
-        = succeed "," do
-          %a{:href => "http://aws.amazon.com/s3/", :target => "_blank", :title => "Amazon Simple Storage Service (Amazon S3)"} Amazon S3
-        = succeed "," do
-          %a{:href => "http://www.rackspace.com/cloud/cloud_hosting_products/files/", :target => "_blank", :title => "Cloud Files - Unlimited Online Storage &amp; Data Storage Services"} CloudFiles
-        SFTP, or FTP.
-    %li
-      %p
-        You customize your own interface using SiteScripts. This means that if you want a special feature in your web interface (say for example a simple slideshow feature to show off your images at work or class), you have full freedom to build the feature using
-        %a{:href => "http://www.liquidmarkup.org/", :target => "_blank", :title => "Liquid Templating language"} liquid templates
-        and JavaScript.
-    %li.last
-      %p
-        You use community-built features. There is somewhat of an 'app store' (which is 100% free of course) where you can take advantage of the cool features that other users have written using the
-        %a{:href => "#", :target => "_blank"} SiteScripts
-        framework. These features will be curated and approved by the people who run STSH.ME.
+        %p
+          %strong
+            You control your own interface.
+          Using SiteScripts you can build any feature you would lie into your web interface (say for example a simple slideshow feature to show off your images at work or class), you have full freedom to build the feature using
+          %a{:href => "http://www.liquidmarkup.org/", :target => "_blank", :title => "Liquid Templating language"} liquid templates
+          and JavaScript.
+      %li.last
+        %p
+          %strong
+            You use community-built features. 
+          There is somewhat of an 'app store' (which is 100% free) where you can take advantage of the cool features that other users have written using the
+          %a{:href => "#", :target => "_blank"} SiteScripts
+          framework. These features will be curated and approved by the people who run STSH.ME.

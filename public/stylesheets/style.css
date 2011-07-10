@@ -1,119 +1,135 @@
+/* @override http://looce.com:3000/stylesheets/style.css */
 /* @override http://looce.com/css/style.css */
+
+@import url("reset.css");
+
 
 body {
 	background: #fff url(../images/bg.png) top left repeat-x;
 	font-family: colaborate;
-	font-size: 16px;
 	color: #555;
 }
-
 p {
 	line-height: 20px;
+	margin: 10px 0;
 }
-
 a, a:active, a:visited { color: #607890; }
 a:hover { color: #036; }
 
+h1, h2, h2, h3, h4, h5, h6 { font-family: 'kulturista-web'; }
+h2 { font-size: 53px; margin-bottom: 20px;}
 
-#container {
+
+#wrapper {
   width: 960px;
   margin: 0 auto;
 }
 
-h1 a{
-	background: url(../images/logo.png) top left no-repeat;
-	padding-left: 46px;
-	font-weight: normal;
-	padding-top: 4px;
-	margin-top: 28px;
-	text-decoration: none;
-	color: #555;
-	display: block;
-	font-size: 12px;
-	padding-bottom: 6px;
+#wrapper.grid_on {
+	background: url(../images/grid.png) top left repeat-y;
 }
-
-h2 {
-	font-family: kulturista-web;
-	font-size: 55px;
-	font-weight: normal;
-	margin: 0;
-}
-
-section {
-	width: 100%;
-	float: left;
-	margin-bottom: 39px;
-}
-
-.left, .right {
-	float: left;
-}
-
-.left {
-	width: 530px;
-}
-
-.left p {
-	width: 385px;
-	margin-left: 25px;
-	font-size: 16px;
-	margin-top: 15px;
-}
-.right {
-	width: 371px;
-	margin-left: 59px;
-}
-
-#main {
-	margin-top: 20px;
-	float: left;
-	display: block;
-}
-
 
 header {
-	margin-bottom: 22px;
+	float: left;
+	width: 960px;
+	margin-bottom: 46px;
 }
 
-ul {
-	padding: 0;
+h1 a{
+	background: url(../images/logo.png) top left no-repeat;
+	text-decoration: none;
+	padding: 4px 0 0 43px;
+	margin: 23px 0 0;
+	float: left;
+	display: block;
 }
-ul li {
-	list-style-type: none;
+
+#home section {
+	width: 960px;
+	float: left;
+	margin-bottom: 55px;
+}
+
+#home .left, .right { float: left; }
+#home .left {
+	width: 550px;
+	font-size: 16px;
+}
+#home .left p {
+	line-height: 24px;
+	padding-left: 40px;
+	padding-right: 33px;
+}
+#home .right {
+	width: 399px;
+	margin-left: 8px;
+}
+
+#contribute {
+	list-style: none;
+}
+#contribute a {
+	display: block;
+	background: top left no-repeat;
+	text-indent: -9999px;
+	float: left;
 }
 
 a#zip {
-	background: url(../images/zip.png) top left no-repeat;
-	display: block;
+	background: url(../images/zip.png);
 	width: 90px;
 	height: 115px;
-	text-indent: -9999px;
-	float: left;
+	margin-left: 42px;
 }
 
 a#github {
-	background: url(../images/octocat.png) top left no-repeat;
-	display: block;
+	background: url(../images/octocat.png);
 	width: 127px;
 	height: 111px;
-	text-indent: -9999px;
+	margin-left: 103px;
+}
+
+#why li {
+    position: relative;
+	
+}
+
+#why li:before {
+    counter-increment: numList;
+    content: counter(numList);
+    position: relative;
+    float: left;
+    
+    font: bold 12px sans-serif;
+    text-align: center;
+    color: #fff;
+    line-height: 18px;
+    
+    width: 25px; 
+    height: 21px;
+    background: #b7b7b7;
+    
+    -moz-border-radius: 999px;
+    border-radius: 999px;
+	padding-top: 3px;
+	margin-top: 11px;
+	margin-left: -38px;
+}
+
+#why {
+	padding-left: 40px;
+	list-style: none;
+	counter-reset: numList;
+}
+
+#why strong { display: block; }
+#why li {
 	float: left;
-	margin-left: 138px;
+	width: 260px;
+	margin-right: 60px;
 }
 
-ol li {
-	width: 253px;
-	float: left;
-	margin-right: 75px;
-
+#why li.last {
+	margin-right: 0;
 }
-
-li.last {
-	margin: 0;
-}
-
-
-
-
 
