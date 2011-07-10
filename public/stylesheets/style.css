@@ -57,8 +57,7 @@ h1 a{
 }
 #home .left p {
 	line-height: 24px;
-	padding-left: 40px;
-	padding-right: 33px;
+	padding-right: 70px;
 }
 #home .right {
 	width: 399px;
@@ -79,7 +78,6 @@ a#zip {
 	background: url(../images/zip.png);
 	width: 90px;
 	height: 115px;
-	margin-left: 42px;
 }
 
 a#github {
