@@ -1,14 +1,35 @@
-%h2 stsh.me Instructions
-
-%ol{:style => "width: 300px"}
-  %li 
-    Download and install the stsh-client
-    = link_to "http://stsh.me/stsh.app.zip", "http://stsh.me/stsh.app.zip"
-  %li
-    In your preferences, set the url to http://stsh.me/images like so:
-    %img{:src => "http://c213515.r15.cf1.rackcdn.com/c92b50077b038c068a98b9fbea3ceebb.png", :style => "clear: both;", :width => "300px"}
-  %li
-    In your preferences under 'Processing', uncheck the 'Pre Processing' option, like so:
-    %img{:src => "http://c213515.r15.cf1.rackcdn.com/c093bee889fafada830905fb703bacd9.png", :style => "clear: both;", :width => "300px"}
-    
-  %li Enjoy sharing screenshots with friends, coworkers, or whoever!
+%section
+  .left
+    %h2 Open Source &amp; Community Driven
+    %p
+      Originally STSH.ME was a way for its creators to simply upload and share screenshots. But over time the vision of the project morphed into something that would be more beneficial for the web world at large.
+    %p
+      That said; you can upload photos, music, videos, text files, or whatever - with a simple click+drag of a mouse, or a few nifty keystrokes.
+  .right
+    %h2 Download &amp; Contribute
+    %ul
+      %li
+        %a#zip{:href => "#", :title => "Download .ZIP"} Download .ZIP
+      %li
+        %a#github{:href => "https://github.com/angst/stsh-client", :title => "Contribute on Github"} Contribute on Github
+%section
+  %h2 Features
+  %ol
+    %li
+      %p
+        You host your own files. This means that you have full ownership and control over what happens to them, if our datacenter explodes into a billion tiny little pieces, you will still have your files. You can set up your own private hosting using services like:
+        = succeed "," do
+          %a{:href => "http://aws.amazon.com/s3/", :title => "Amazon Simple Storage Service (Amazon S3)"} Amazon S3
+        = succeed "," do
+          %a{:href => "http://www.rackspace.com/cloud/cloud_hosting_products/files/", :title => "Cloud Files - Unlimited Online Storage &amp; Data Storage Services"} CloudFiles
+        SFTP, or FTP.
+    %li
+      %p
+        You customize your own interface using SiteScripts. This means that if you want a special feature in your web interface (say for example a simple slideshow feature to show off your images at work or class), you have full freedom to build the feature using
+        %a{:href => "http://www.liquidmarkup.org/", :title => "Liquid Templating language"} liquid templates
+        and JavaScript.
+    %li.last
+      %p
+        You use community-built features. There is somewhat of an 'app store' (which is 100% free of course) where you can take advantage of the cool features that other users have written using the
+        %a{:href => "#"} SiteScripts
+        framework. These features will be curated and approved by the people who run STSH.ME.
