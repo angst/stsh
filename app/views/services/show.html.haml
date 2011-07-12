@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @service.user_id
+%p
+  %b Provider:
+  = @service.provider
+%p
+  %b Uid:
+  = @service.uid
+%p
+  %b Uname:
+  = @service.uname
+%p
+  %b Uemail:
+  = @service.uemail
+
+= link_to 'Edit', edit_service_path(@service)
+\|
+= link_to 'Back', services_path
