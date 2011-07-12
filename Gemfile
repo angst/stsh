@@ -29,7 +29,9 @@ gem 'sqlite3'
 # group :development, :test do
 #   gem 'webrat'
 # end
-gem "devise"
+
+gem 'omniauth'
+
 gem "haml", ">= 3.0.0"
 gem "haml-rails"
 gem "jquery-rails"
