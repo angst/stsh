@@ -1,0 +1,36 @@
+<div id="user_box">
+  <%= image_tag("http://looce.com:3000/images/icon.png", :class => "avatar", :width => "32px", :height => "32px") %>
+  <a href="#" class="profile_link">New User</a>
+</div>
+
+<div id="main_content">
+  <h2>Registration</h2>
+  <div id="registration">
+    <%= form_tag :controller => "services", :action => "newaccount" do %>
+      <fieldset>
+        <% if @authhash[:name].blank? %>
+          <label for="name">Name</label>
+          <input type="text" name="user[name]" value="" id="name"/>
+        <% else %>
+          <label for="name">Name</label>
+          <span class="form_value" id="name"><%= @authhash[:name] %></span>
+        <% end %>
+
+        <% if @authhash[:email].blank? %>
+          <label for="email">Email</label>
+          <input type="text" name="user[email]" value="" id="email"/>
+        <% else %>
+          <label for="name">Name</label>
+          <span class="form_value" id="name"><%= @authhash[:email] %></span>
+        <% end %>
+
+        <label for="username">Username</label>
+        <input type="text" name="user[username]" value="" id="username"/>
+
+        <label for="birthdate">Birthdate</label>
+        <input type="text" name="user[birthdate]" value="" id="profile_birthdate"/>
+        <%= submit_tag "Confirm and create new account" %>
+      </fieldset>
+    <% end %>
+  </div>
+</div>

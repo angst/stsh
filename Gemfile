@@ -39,3 +39,5 @@ gem "jquery-rails"
 
 gem "cloudfiles"
 gem "alphadecimal"
+
+gem "rake", "0.9.2"
